@@ -1,0 +1,40 @@
+.about-section {
+    display: flex;
+    background-color: var(--primary);
+    margin: 0;
+    padding: 0;
+    margin-top: 160px;
+  }
+  
+.about-content {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 160px;
+  }
+  
+.about-text {
+    flex: 1;
+  }
+  
+.about-text h1 {
+    color: var(--secundary-p);
+    font-size: 40px;
+    text-align: center;
+  }
+  
+.about-text p {
+    color: var(--secundary-light);
+    text-align: justify;
+    margin-right: 60px;
+  }
+
+.first-text {
+  margin-bottom: 60px;
+}
+
+.second-text {
+  margin-bottom: -40px;
+}
+  

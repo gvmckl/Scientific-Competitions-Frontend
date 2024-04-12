@@ -1,0 +1,83 @@
+
+footer  {
+	width: 100%;
+	color: var(--secundary-light);
+}
+
+.footer-link {
+	text-decoration: none;
+}
+
+#footer-contacts h2 {
+	margin-top: 35px;
+}
+
+#footer-content {
+	background-color: var(--secundary-p);
+	display: flex;
+}
+
+#footer-social-media {
+	display:flex;
+	gap: 2rem;
+	margin-top: 1.5rem;
+}
+
+#footer-social-media .footer-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 2.5rem;
+	width: 2.5rem;
+    margin-left: 10px;
+	color: var(--secundary-p);
+	border-radius: 50%;
+	transition: all 0.2s;
+}
+
+#footer-social-media .footer-link:hover {
+    background-color: var(--primary);
+    color: var(--secundary-light);
+}
+
+.footer-list {
+	display: flex;
+	flex-direction:column;
+	gap: 0.4rem;
+	list-style: none;
+}
+
+.footer-list .footer-link {
+	color: var(--secundary-light);
+	transition: all 0.2s;
+}
+
+.footer-list .footer-link:hover {
+	color: var(--secundary);
+}
+
+.footer-list img {
+	height: 200px;
+	width: 200px;
+    margin-top: 20px;
+}
+
+#footer-content {
+    display: flex;
+    justify-content:space-around;
+}
+
+#instagram,
+#github,
+#linkedin {
+	background-color: var(--secundary);
+}
+
+#footer-copyright{
+	display: flex;
+	justify-content: center;
+	background-color: var(--secundary-p);
+	font-size: 0.9rem;
+	padding: 1.5rem;
+	font-weight: 100;
+}
