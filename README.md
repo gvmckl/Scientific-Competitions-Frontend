@@ -20,6 +20,7 @@ Competições científicas são eventos que promovem a participação de estudan
 - **React-DOM:** ^18.2.0
 - **React Router DOM:** ^6.22.3
 - **Axios:** ^1.6.8
+- **express:** ^4.19.2
 - **ESLint:** ^8.57.0
 - **Vite:** ^5.2.0
 - **@fortawesome/free-brands-svg-icons:** ^6.5.2
@@ -51,7 +52,7 @@ Competições científicas são eventos que promovem a participação de estudan
 
 4. Acesse o repositório da API em:
     ```bash
-    git clone https://github.com/gvmckl/Scientific-Competitions-Backend.git
+    https://github.com/gvmckl/Scientific-Competitions-Backend.git
      ```
 
 ## ❓Quais são os planos futuros e previstos para as atualizações do projeto?
@@ -114,6 +115,7 @@ Scientific competitions are events that promote student participation in areas s
 - **React-DOM:** ^18.2.0
 - **React Router DOM:** ^6.22.3
 - **Axios:** ^1.6.8
+- **express:** ^4.19.2
 - **ESLint:** ^8.57.0
 - **Vite:** ^5.2.0
 - **@fortawesome/free-brands-svg-icons:** ^6.5.2
@@ -145,7 +147,7 @@ Scientific competitions are events that promote student participation in areas s
 
 4. Access the API repository at:
     ```bash
-    git clone https://github.com/gvmckl/Scientific-Competitions-Backend.git
+     https://github.com/gvmckl/Scientific-Competitions-Backend.git
      ```
 
 ## ❓What are the future plans and expected updates for the project?
