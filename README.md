@@ -14,12 +14,29 @@ Competições científicas são eventos que promovem a participação de estudan
 
 ![Landing Page](https://i.imgur.com/KgkJL9z.png)
 
+## ❓Quais são as tecnologias e versões utilizadas no projeto? 
+
+- **React:** ^18.2.0
+- **React-DOM:** ^18.2.0
+- **React Router DOM:** ^6.22.3
+- **Axios:** ^1.6.8
+- **ESLint:** ^8.57.0
+- **Vite:** ^5.2.0
+- **@fortawesome/free-brands-svg-icons:** ^6.5.2
+- **@fortawesome/react-fontawesome:** ^0.2.0
+- **@types/react:** ^18.2.66
+- **@types/react-dom:** ^18.2.22
+- **@vitejs/plugin-react:** ^4.2.1
+- **react-emoji-render:** ^2.0.1
+- **eslint-plugin-react:** ^7.34.1
+- **eslint-plugin-react-hooks:** ^4.6.0
+- **eslint-plugin-react-refresh:** ^0.4.6
 
 ## ❓Como Usar?
 
 1. Clone este repositório:
    ```bash
-   git clonehttps://github.com/gvmckl/Scientific-Competitions-Frontend
+   git clone https://github.com/gvmckl/Scientific-Competitions-Frontend
    ```
 
 2. Instale as dependências:
@@ -32,7 +49,24 @@ Competições científicas são eventos que promovem a participação de estudan
    npm run dev
    ```
 
-4. Acesse a API em http://localhost:5173/#.
+4. Acesse o repositório da API em:
+    ```bash
+    git clone https://github.com/gvmckl/Scientific-Competitions-Backend.git
+     ```
+
+## ❓Quais são os planos futuros e previstos para as atualizações do projeto?
+
+### 1. Formulário de cadastro para novas competições:
+
+O projeto possui uma linha totalmente social e colaborativa, ou seja, o objetivo dele é fazer com que os alunos também possam contribuir para a propagação dessas competições dentro do nosso site.
+
+### 2. Contrução de um banco de dados:
+
+Pretendemos construir um banco de dados próprio para o nosso site com o objetivo de torná-lo de fato um projeto que atenda de forma significativa e permanente o público-alvo.
+
+### 3. Expansão do site:
+
+Pretendemos expandir o site para que ele se torne, além de um site estático. Pretendemos adicionar informações sobre as áreas de conhecimento, notícias e exemplos de pessoas que possam inspirar os alunos.
 
 ## ❓Como Contribuir?
 
