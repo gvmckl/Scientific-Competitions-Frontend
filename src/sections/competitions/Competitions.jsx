@@ -1,17 +1,12 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './Competitions.css';
 
 function Competitions() {
   const [showModal, setShowModal] = useState(false);
   const [selectedCompetitions, setSelectedCompetitions] = useState([]);
   const sliderRef = useRef(null);
+  const [dados, setDados] = useState([]);
 
-  const scroll = (scrollOffset) => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollLeft += scrollOffset;
-    }
-  };
- 
   const openModal = (competitions) => {
     setSelectedCompetitions(competitions);
     setShowModal(true);
@@ -26,6 +21,13 @@ function Competitions() {
       closeModal();
     }
   };
+
+  useEffect(() => {
+    fetch('http://localhost:3001/competitions')
+      .then(response => response.json())
+      .then(data => setDados(data))
+      .catch(error => console.error('Erro ao buscar os dados:', error));
+  }, []);
 
   return (
     <div id='competitions'>
@@ -43,66 +45,84 @@ function Competitions() {
                   <h1>Ciências Naturais</h1>
                   <p>Essa sessão inclui áreas como biologia, química, física, astronomia, geologia e ciências ambientais.</p>
                   <button className="competitions-button" onClick={() => openModal([
-                    { title: "Competição 1", specialty: "Biologia", description: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint adipisci animi laboriosam doloribus cupiditate rerum dicta quia nulla reiciendis id amet ullam, voluptatibus ipsa soluta ea explicabo corrupti modi quo!", type: "Online", prize: "$1000", url: "https://example.com" },
+                    {},
                   ])}>Explorar</button>
                 </div>
                 <div className='competition-box'>
                   <h1>Ciências Sociais</h1>
                   <p>Essa sessão inclui áreas como sociologia, psicologia, antropologia, economia, ciência política e geografia humana.</p>
                   <button className="competitions-button" onClick={() => openModal([
-                    { title: "Competição 1", specialty: "Portugues", description: "Descrição da competição 1", type: "Online", prize: "$1000", url: "https://example.com" },
+                    {}
                   ])}>Explorar</button>
                 </div>
                 <div className='competition-box'>
                   <h1>Humanidades</h1>
                   <p>Essa sessão inclui áreas como história, filosofia, literatura, línguas e lingística.</p>
-                  <button className="competitions-button" onClick={() => openModal([])}>Explorar</button>
+                  <button className="competitions-button" onClick={() => openModal([
+                    {}
+                  ])}>Explorar</button>
                 </div>
                 <div className='competition-box'>
                   <h1>Tecnologia</h1>
                   <p>Essa sessão inclui áreas como engenharia, tecnologia da informação, ciência da computação e sistemas de informação.</p>
-                  <button className="competitions-button" onClick={() => openModal([])}>Explorar</button>
+                  <button className="competitions-button" onClick={() => openModal([
+                    {}
+                  ])}>Explorar</button>
                 </div>
                 <div className='competition-box'>
                   <h1>Matemática</h1>
                   <p>Essa sessão inclui áreas como álgebra, raciocínio lógico, geometria, estatística e teoria dos números.</p>
-                  <button className="competitions-button" onClick={() => openModal([])}>Explorar</button>
+                  <button className="competitions-button" onClick={() => openModal([
+                    {}
+                  ])}>Explorar</button>
                 </div>
                 <div className='competition-box'>
                   <h1>Artes</h1>
                   <p>Essa sessão inclui áreas como artes visuais, música, dança, literatura criativa, teatro, cinema e audiovisual.</p>
-                  <button className="competitions-button" onClick={() => openModal([])}>Explorar</button>
+                  <button className="competitions-button" onClick={() => openModal([
+                    {}
+                  ])}>Explorar</button>
                 </div>
                 <div className='competition-box'>
                   <h1>Saúde</h1>
                   <p>Essa sessão inclui áreas como medicina, enfermagem, odontologia, nutrição e saúde pública.</p>
-                  <button className="competitions-button" onClick={() => openModal([])}>Explorar</button>
+                  <button className="competitions-button" onClick={() => openModal([
+                    {}
+                  ])}>Explorar</button>
                 </div>
                 <div className='competition-box'>
                   <h1>Ciências Agrárias</h1>
                   <p>Essa sessão inclui áreas como agronomia, ciência do solo, zootecnia, engenharia agrícola, agroecologia e agroindústria.</p>
-                  <button className="competitions-button" onClick={() => openModal([])}>Explorar</button>
+                  <button className="competitions-button" onClick={() => openModal([
+                    {}
+                  ])}>Explorar</button>
                 </div>
                 <div className='competition-box'>
                   <h1>Comunicação</h1>
                   <p>Essa sessão inclui áreas como jornalismo, publicidade, relações públicas, comunicação digital, comunicação visual e comunicação organizacional.</p>
-                  <button className="competitions-button" onClick={() => openModal([])}>Explorar</button>
+                  <button className="competitions-button" onClick={() => openModal([
+                    {}
+                  ])}>Explorar</button>
                 </div>
                 <div className='competition-box'>
                   <h1>Ciências da Terra</h1>
                   <p>Essa sessão inclui áreas como meteorologia, oceanografia, climatologia, geofísica e hidrologia.</p>
-                  <button className="competitions-button" onClick={() => openModal([])}>Explorar</button>
+                  <button className="competitions-button" onClick={() => openModal([
+                    {}
+                  ])}>Explorar</button>
                 </div>
                 <div className='competition-box'>
                   <h1>Empreendedorismo</h1>
                   <p>Essa sessão inclui áreas administração, investimentos, marketing tecnologia, design e inovação.</p>
-                  <button className="competitions-button" onClick={() => openModal([])}>Explorar</button>
+                  <button className="competitions-button" onClick={() => openModal([
+                    {}
+                  ])}>Explorar</button>
                 </div>
               </div>
             </div>
             <div className="arrows-container">
-              <button className="arrow left-arrow" onClick={() => scroll(-260)}>&#10094;</button>
-              <button className="arrow right-arrow" onClick={() => scroll(260)}>&#10095;</button>
+              <button className="arrow left-arrow">&#10094;</button>
+              <button className="arrow right-arrow">&#10095;</button>
             </div>
           </div>
         </div>
@@ -126,14 +146,14 @@ function Competitions() {
                         </tr>
                       </thead>
                       <tbody>
-                        {selectedCompetitions.map(competition => (
-                          <tr key={competition.title}>
+                        {dados.map(competition => (
+                          <tr key={competition.id}>
                             <td>{competition.title}</td>
                             <td>{competition.specialty}</td>
                             <td>{competition.description}</td>
                             <td>{competition.type}</td>
                             <td>{competition.prize}</td>
-                            <td><button className="competition-link" onClick={() => window.open(competition.url, "_blank")} >Link</button></td>
+                            <td><button className="competition-link" onClick={() => window.open(competition.competition_url, "_blank")} >Link</button></td>
                           </tr>
                         ))}
                       </tbody>

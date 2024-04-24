@@ -26,12 +26,12 @@ h1 {
  p {
   color: var(--secundary-light);
   text-align: justify;
-  margin-right: -50px;
+  margin-right: -30px;
 }
 
 .home-img {
     margin-left: 100px; 
-    margin-right: 100px;
+    margin-right: 60px;
     margin-top: -10px;
     display: flex;
   }

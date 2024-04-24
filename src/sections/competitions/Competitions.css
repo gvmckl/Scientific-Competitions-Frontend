@@ -98,7 +98,7 @@
     margin-right: 20px;
     color: var(--secundary-light);
     margin-top: 30px;
-    font-size: 26px;
+    font-size: 24px;
     flex: 1;
   }
   
@@ -125,17 +125,11 @@
     color: var(--secundary-p);
     border-radius: 20%;
     padding: 10px 20px;
-    cursor: pointer;
+    cursor:default;
     border: 2px solid var(--secundary-p);
     transform: translateY(-610%);
   }
-
-  .arrow:hover {
-    color: var(--secundary-light);
-    background-color: var(--secundary-p);
-    border: 2px solid var(--secundary-light);
-  }
-  
+ 
   .left-arrow {
     left: 0;
   }
